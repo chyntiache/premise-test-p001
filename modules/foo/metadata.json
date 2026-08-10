@@ -1,0 +1,12 @@
+{
+  "homepage": "https://example.invalid/foo",
+  "maintainers": [
+    {
+      "name": "dummy",
+      "github": "dummy"
+    }
+  ],
+  "versions": [
+    "1.0.0"
+  ]
+}
