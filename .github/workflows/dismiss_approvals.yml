@@ -1,0 +1,21 @@
+name: Dismiss Stale PR Approvals
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+jobs:
+  dismiss_approvals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        with:
+          egress-policy: audit
+
+      - name: Run BCR PR Reviewer
+        uses: i1qb4lbyt33xp1o1t/continuous-integration-mirror/actions/bcr-pr-reviewer@35d5c5d6c3d7782264aac16b29ab77b9017c4020
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          action-type: dismiss_approvals

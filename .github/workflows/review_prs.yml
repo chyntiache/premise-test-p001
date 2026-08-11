@@ -1,0 +1,20 @@
+name: Review BCR Pull Requests
+on:
+  workflow_dispatch:       # cron dihapus untuk uji P-002 — lihat penyimpangan 8.1 #7
+
+jobs:
+  review_prs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        if: github.repository_owner == 'i1qb4lbyt33xp1o1t'
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        with:
+          egress-policy: audit
+
+      - name: Run BCR PR Reviewer
+        if: github.repository_owner == 'i1qb4lbyt33xp1o1t'
+        uses: i1qb4lbyt33xp1o1t/continuous-integration-mirror/actions/bcr-pr-reviewer@35d5c5d6c3d7782264aac16b29ab77b9017c4020
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          action-type: review_prs
