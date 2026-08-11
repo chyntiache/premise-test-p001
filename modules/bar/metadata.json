@@ -1,0 +1,14 @@
+{
+  "homepage": "https://example.invalid/bar",
+  "maintainers": [
+    {
+      "name": "Akun A (penjaga anti-merge, tidak pernah meng-approve)",
+      "github": "i1qb4lbyt33xp1o1t",
+      "github_user_id": 148077854
+    }
+  ],
+  "versions": [
+    "1.0.0"
+  ],
+  "yanked_versions": {}
+}

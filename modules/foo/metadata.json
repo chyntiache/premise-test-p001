@@ -2,11 +2,13 @@
   "homepage": "https://example.invalid/foo",
   "maintainers": [
     {
-      "name": "dummy",
-      "github": "dummy"
+      "name": "Akun B (approver tanpa write)",
+      "github": "muhammadiqbaalmusyaffa-debug",
+      "github_user_id": 315443372
     }
   ],
   "versions": [
     "1.0.0"
-  ]
+  ],
+  "yanked_versions": {}
 }
